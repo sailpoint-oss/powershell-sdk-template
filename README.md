@@ -33,13 +33,6 @@ Install the SailPoint PowerShell modules from the PowerShell Gallery:
 Install-Module -Name PSSailpoint
 ```
 
-If any scripts use Beta or versioned API endpoints, install the corresponding modules as well:
-
-```powershell
-Install-Module -Name PSSailpoint.Beta
-Install-Module -Name PSSailpoint.V2024
-```
-
 > **Tip:** If you are prompted to trust the repository, select **Yes** or run with `-Force` to skip the prompt.
 
 ### 4. Configure the SDK

@@ -1,3 +1,5 @@
+Import-Module PSSailpoint
+
 # Create transform
 $JSON = @"
 {
@@ -17,8 +19,8 @@ $JSON = @"
 $Transform = ConvertFrom-JsonToTransform -Json $JSON
 
  try {
-    New-Transform -Transform $Transform
+    New-TransformV1 -Transform $Transform
 } catch {
-    Write-Host ("Exception occurred when calling New-Transform: {0}" -f $_.ErrorDetails)
+    Write-Host ("Exception occurred when calling New-TransformV1: {0}" -f $_.ErrorDetails)
     Write-Host ("Response headers: {0}" -f $_.Exception.Response.Headers)
 }
